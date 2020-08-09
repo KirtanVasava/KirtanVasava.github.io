@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <h1>Data Redirection by JAVA SCRIPT</h1>
+        <body>
+            Your Username is <span id="result1" ></span> .
+            <p>
+            Your Email Id is <span id="result2" ></span> .
+            </p>
+            <p>
+            Your Mobile Number is <span id="result3" ></span> .
+            </p>
+            <script>
+            
+                document.getElementById("result1").innerHTML=localStorage.getItem("textvalue1");
+
+                document.getElementById("result2").innerHTML=localStorage.getItem("textvalue2");
+
+                document.getElementById("result3").innerHTML=localStorage.getItem("textvalue3");
+
+            </script>
+
+        </body>
+    </head>
+</html>
