@@ -1,21 +1,34 @@
 <html>
-  <head><link rel="stylesheet" type="text/css" href="mycss.css"></head>
+  <head><link rel="stylesheet" type="text/css" href="mycss.css">
+  
+    <script>  
+      function validateform(){  
+      var un=document.getElementById("uname").value;  
+      localStorage.setItem("textvalue",un);
+         
+        return false;  
+      }   
+        
+      </script>  
+  
+  </head>
   
 <body>
+
   
      <center>
-       <form action="shostel.html" >
+       <form name="myform" action="tempJS.html" >
       <h1>Login Page</h1>   
           <label for="uname"><b>Username</b></label>
         <p>
-          <input type="text" placeholder="Enter Username..." name="uname" required>
+          <input type="text" placeholder="Enter Username..." name="uname" id="uname">
         </p> 
           <label for="psw"><b>Password</b></label>
         <p>
-          <input type="text" placeholder="Enter Password..." name="psw" required>
+          <input type="text" placeholder="Enter Password..." name="psw">
         </p>
 
-        <button class="button button1" type="submit" >Login</button> 
+        <button class="button button1" type="submit" onclick="validateform();" >Login</button> 
 
       
         <br><br>
@@ -24,7 +37,9 @@
         
         </br></br>
 
+
     </center>
 </form>
+
 </body>
 </html>
